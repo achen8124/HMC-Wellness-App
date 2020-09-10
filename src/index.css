@@ -1,1 +1,21 @@
 
+html{
+    font-size: 10px;
+    background: linear-gradient(0deg, rgb(195, 254, 255) 0%,rgb(255, 228, 253) 100%) no-repeat;
+}
+body{
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1.5rem;
+    
+}
+h1{
+    font-family: 'Helvetica', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: center;
+}
+#instructions{
+    font-size: 2rem;
+    font-style: italic;
+    text-decoration: lightcoral underline;
+}
