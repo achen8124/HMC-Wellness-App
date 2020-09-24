@@ -1,15 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 import './App.css'
-export {App, Calendar}
 
-const App = () => {
-    return (
+
+class App extends React.Component {
+    // constructor(props) {
+    //     super(props);
+    // }
+    render() {
+        return (
         <div className="main-container">
             <h1>uh oh</h1>
             <button onClick={function() {ReactDOM.render(<Calendar />, document.getElementById('root'))}}> Go to home </button>
+            <NavBar />
         </div>
-    );
+        );
+    }
 }
 
 const Calendar = () => {
@@ -20,3 +26,13 @@ const Calendar = () => {
         </div>
     )
 }
+
+const NavBar = () => {
+    return (
+        <div>
+            <p>let's implement this later</p>
+        </div>
+    )
+}
+
+export {App, Calendar, NavBar}
