@@ -6,12 +6,12 @@ import {Resources} from './Resources.js';
 import {Exercises} from './Exercises.js';
 import {Settings} from './Settings.js';
 
-
 class App extends React.Component {
-    // constructor(props) {
-    //     super(props);
-    // }
-    render() {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {        
         return (
             <div className="main-container">
                 <h1>Home Page</h1>
@@ -20,7 +20,6 @@ class App extends React.Component {
         );
     }
 }
-
 
 const NavBar = () => {
     return (
@@ -49,4 +48,8 @@ const NavBar = () => {
     )
 }
 
-export {App, NavBar}
+function Header(props) {
+    return (<h1> {props.name} </h1>);
+}
+
+export {App, NavBar, Header}

@@ -4,7 +4,9 @@ import React from 'react';
 import {App, NavBar} from './App';
 
 class Resources extends React.Component {
+    
     render() {
+        const name = "Resources"
         return (
             <div>
                 <h1> Resources </h1>
