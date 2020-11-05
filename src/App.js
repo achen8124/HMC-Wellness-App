@@ -1,71 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 import './App.css'
-
+import {Reminders} from './Reminders.js';
+import {Resources} from './Resources.js';
+import {Exercises} from './Exercises.js';
+import {Settings} from './Settings.js';
 
 class App extends React.Component {
-    // constructor(props) {
-    //     super(props);
-    // }
-    render() {
-        return (
-        <div className="main-container">
-            <h1>Home Page</h1>
-            <NavBar />
-        </div>
-        );
+    constructor(props) {
+        super(props);
     }
-}
 
-class Reminders extends React.Component {
-    render() {
+    render() {        
         return (
-            <div>
-                <h1> Reminders? </h1>
+            <div className="main-container">
+                <h1>Home Page</h1>
                 <NavBar />
             </div>
         );
     }
 }
-
-class Resources extends React.Component {
-    render() {
-        return (
-            <div>
-                <h1> Resources </h1>
-                <NavBar />
-            </div>
-        );
-    }
-}
-
-class Exercises extends React.Component {
-    render() {
-        return (
-            <div>
-                <h1> Exercises </h1>
-                <NavBar />
-            </div>
-        );
-    }
-}
-
-class Settings extends React.Component {
-    render() {
-        return (
-            <div>
-                <h1> Settings </h1>
-                <NavBar />
-            </div>
-        );
-    }
-}
-
 
 const NavBar = () => {
     return (
         <div>
-            <p>let's implement this later</p>
             <button onClick={function() {
                 ReactDOM.render(<App />, document.getElementById('root'))
                 }}> Home Page 
@@ -90,4 +48,8 @@ const NavBar = () => {
     )
 }
 
-export {App, NavBar}
+function Header(props) {
+    return (<h1> {props.name} </h1>);
+}
+
+export {App, NavBar, Header}
